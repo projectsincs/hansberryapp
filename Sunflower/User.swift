@@ -17,6 +17,7 @@ class User {
     var city: String?
     var state: String?
     var dateCreated: String?
+    var vegetableList: [String]?
     
     init(json: NSDictionary){
         self.id = json["user_id"] as? String
@@ -26,5 +27,6 @@ class User {
         self.city = json["city"] as? String
         self.state = json["state"] as? String
         self.dateCreated = json["date_created"] as? String
+        self.vegetableList = json["vegetable_list"] as? [String]
     }
 }
