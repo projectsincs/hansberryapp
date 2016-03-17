@@ -30,7 +30,7 @@
 		292E0C591C152AAD0021AE40 /* Home-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 292E0C581C152AAD0021AE40 /* Home-25.png */; };
 		292E0C5B1C152AC30021AE40 /* Phone-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 292E0C5A1C152AC30021AE40 /* Phone-25.png */; };
 		292E0C5D1C152B4E0021AE40 /* Message-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 292E0C5C1C152B4E0021AE40 /* Message-25.png */; };
-		292E0C5F1C1536E60021AE40 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292E0C5E1C1536E60021AE40 /* Member.swift */; };
+		292E0C5F1C1536E60021AE40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292E0C5E1C1536E60021AE40 /* User.swift */; };
 		292E0C611C15488E0021AE40 /* IMG_0853 (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 292E0C601C15488E0021AE40 /* IMG_0853 (1).jpg */; };
 		292E0C631C154C990021AE40 /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292E0C621C154C990021AE40 /* AddMemberViewController.swift */; };
 		292E0C651C1573B00021AE40 /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292E0C641C1573B00021AE40 /* MemberListViewController.swift */; };
@@ -69,7 +69,7 @@
 		292E0C581C152AAD0021AE40 /* Home-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home-25.png"; sourceTree = "<group>"; };
 		292E0C5A1C152AC30021AE40 /* Phone-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Phone-25.png"; sourceTree = "<group>"; };
 		292E0C5C1C152B4E0021AE40 /* Message-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message-25.png"; sourceTree = "<group>"; };
-		292E0C5E1C1536E60021AE40 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		292E0C5E1C1536E60021AE40 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		292E0C601C15488E0021AE40 /* IMG_0853 (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IMG_0853 (1).jpg"; sourceTree = "<group>"; };
 		292E0C621C154C990021AE40 /* AddMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMemberViewController.swift; path = sunflower/AddMemberViewController.swift; sourceTree = SOURCE_ROOT; };
 		292E0C641C1573B00021AE40 /* MemberListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberListViewController.swift; path = ../MemberListViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				29202CE91C14056900A6E2E2 /* LeftSideViewController.swift */,
 				29202CEB1C14062F00A6E2E2 /* RightSideViewController.swift */,
 				292E0C391C14B4200021AE40 /* AboutViewController.swift */,
-				292E0C5E1C1536E60021AE40 /* Member.swift */,
+				292E0C5E1C1536E60021AE40 /* User.swift */,
 				292E0C621C154C990021AE40 /* AddMemberViewController.swift */,
 				292E0C641C1573B00021AE40 /* MemberListViewController.swift */,
 			);
@@ -243,7 +243,7 @@
 				292E0C3A1C14B4200021AE40 /* AboutViewController.swift in Sources */,
 				29202CE61C14001000A6E2E2 /* MBProgressHUD.m in Sources */,
 				2910CCBC1C0D520B0015E095 /* ViewController.swift in Sources */,
-				292E0C5F1C1536E60021AE40 /* Member.swift in Sources */,
+				292E0C5F1C1536E60021AE40 /* User.swift in Sources */,
 				29202CEA1C14056900A6E2E2 /* LeftSideViewController.swift in Sources */,
 				2910CCBA1C0D520B0015E095 /* AppDelegate.swift in Sources */,
 				29202CEC1C14062F00A6E2E2 /* RightSideViewController.swift in Sources */,

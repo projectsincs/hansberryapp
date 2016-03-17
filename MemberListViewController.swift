@@ -11,7 +11,7 @@ import UIKit
 class MemberListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-    var members = [Member]()
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
             do{
                 let json = try NSJSONSerialization.JSONObjectWithData(JSONData, options: NSJSONReadingOptions.MutableContainers)
                 for anItem in json as! [Dictionary<String, AnyObject>]{
-                    members.append(Member(json: anItem))
+                    users.append(User(json: anItem))
                 }
             } catch let error as NSError{
                 print("Failed to load: \(error.localizedDescription)")
@@ -39,13 +39,13 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {   //returns number of rows in table view
-        return members.count
+        return users.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MemberListCell", forIndexPath: indexPath)
-        cell.textLabel?.text = members[indexPath.row].firstName! + " " + members[indexPath.row].lastName!
-        cell.detailTextLabel?.text = members[indexPath.row].bedNumber
+        cell.textLabel?.text = users[indexPath.row].firstName! + " " + users[indexPath.row].lastName!
+        //cell.detailTextLabel?.text = users[indexPath.row].bedNumber
         return cell
      }
 
@@ -67,17 +67,17 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowDetail" {
-            let memberDetailViewController = segue.destinationViewController as! MemberDetailViewController
-            let myIndexPath = self.tableView.indexPathForSelectedRow!
-            let index = myIndexPath.row
-            let selectedMember = members[index]
-//            memberDetailViewController.member = selectedMember
-            
-        }
-    }
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "ShowDetail" {
+//            let memberDetailViewController = segue.destinationViewController as! MemberDetailViewController
+//            let myIndexPath = self.tableView.indexPathForSelectedRow!
+//            let index = myIndexPath.row
+//            let selectedMember = users[index]
+////            memberDetailViewController.member = selectedMember
+//            
+//        }
+//    }
     
 
 }

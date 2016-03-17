@@ -10,7 +10,7 @@ import UIKit
 
 class AboutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var member = [Member]()
+    var user = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,34 +26,34 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
     {
         
         switch(indexPath.row){
-        case 0: let memberNameCell = tableView.dequeueReusableCellWithIdentifier("memberNameCell", forIndexPath: indexPath)
+        case 0: let userNameCell = tableView.dequeueReusableCellWithIdentifier("userNameCell", forIndexPath: indexPath)
                 let userFirstName = NSUserDefaults.standardUserDefaults().stringForKey("userFirstName")
                 let userLastName = NSUserDefaults.standardUserDefaults().stringForKey("userLastName")
                 let userFullName = userFirstName! + " " + userLastName!
-                memberNameCell.textLabel?.text = userFullName
-                return memberNameCell
+                userNameCell.textLabel?.text = userFullName
+                return userNameCell
         case 1:
-                let memberAddressCell = tableView.dequeueReusableCellWithIdentifier("memberAddressCell", forIndexPath: indexPath)
+                let userAddressCell = tableView.dequeueReusableCellWithIdentifier("userAddressCell", forIndexPath: indexPath)
                 let userAddress = NSUserDefaults.standardUserDefaults().stringForKey("userAddress")
-                memberAddressCell.textLabel?.text = userAddress
-                return memberAddressCell
-        case 2: let memberPhoneNumberCell = tableView.dequeueReusableCellWithIdentifier("memberPhoneNumberCell", forIndexPath: indexPath)
+                userAddressCell.textLabel?.text = userAddress
+                return userAddressCell
+        case 2: let userPhoneNumberCell = tableView.dequeueReusableCellWithIdentifier("userPhoneNumberCell", forIndexPath: indexPath)
                 let userPhoneNumber = NSUserDefaults.standardUserDefaults().stringForKey("userPhoneNumber")
-                memberPhoneNumberCell.textLabel?.text = userPhoneNumber
-                return memberPhoneNumberCell
-        case 3: let memberEmailCell = tableView.dequeueReusableCellWithIdentifier("memberEmailCell", forIndexPath: indexPath)
+                userPhoneNumberCell.textLabel?.text = userPhoneNumber
+                return userPhoneNumberCell
+        case 3: let userEmailCell = tableView.dequeueReusableCellWithIdentifier("userEmailCell", forIndexPath: indexPath)
                 let userEmail = NSUserDefaults.standardUserDefaults().stringForKey("userEmail")
-                memberEmailCell.textLabel?.text = userEmail
-                return memberEmailCell
-        case 4: let memberJoinDateCell = tableView.dequeueReusableCellWithIdentifier("memberJoinDateCell", forIndexPath: indexPath)
+                userEmailCell.textLabel?.text = userEmail
+                return userEmailCell
+        case 4: let userJoinDateCell = tableView.dequeueReusableCellWithIdentifier("userJoinDateCell", forIndexPath: indexPath)
                 let userJoinDate = NSUserDefaults.standardUserDefaults().stringForKey("userJoinDate")
-                memberJoinDateCell.textLabel?.text = userJoinDate
+                userJoinDateCell.textLabel?.text = userJoinDate
         print(userJoinDate)
-                return memberJoinDateCell
-        case 5: let memberBedNumberCell = tableView.dequeueReusableCellWithIdentifier("memberBedNumberCell", forIndexPath: indexPath)
+                return userJoinDateCell
+        case 5: let userBedNumberCell = tableView.dequeueReusableCellWithIdentifier("userBedNumberCell", forIndexPath: indexPath)
                 let userBedNumber = NSUserDefaults.standardUserDefaults().stringForKey("userBedNumber")
-                memberBedNumberCell.textLabel?.text = userBedNumber
-                return memberBedNumberCell
+                userBedNumberCell.textLabel?.text = userBedNumber
+                return userBedNumberCell
         default:
             print("Error building prototype cells")
         }
